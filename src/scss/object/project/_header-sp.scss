@@ -1,0 +1,227 @@
+.p-header-sp {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  margin-top: 57px;
+  padding-bottom: 57px;
+  overflow-y: scroll;
+  clear: both;
+  font-size: 1.6rem;
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  &.active {
+    display: block;
+  }
+  &__indexWrap {
+    display: block;
+  }
+  &__index {
+    display: block;
+    padding: 20px;
+    position: relative;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #fff;
+    background: rgba(83, 140, 160, 0.96);
+    border-bottom: 1px solid #86b5c5;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      margin-top: -3px;
+      width: 6px;
+      height: 6px;
+      border-top: 1px solid #fff;
+      border-right: 1px solid #fff;
+      transform: rotate(135deg);
+      transition: all 0.3s;
+    }
+    &.active {
+      border-bottom: 0;
+      &::before {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__indexChild {
+    display: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    background: rgba(98, 158, 178, 0.96);
+  }
+  &__childWrap {
+    border-top: 1px solid #86b5c5;
+  }
+  &__mission .p-header-sp__childWrap {
+    border-top: none;
+  }
+  &__childWrap ul {
+    zoom: 1;
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+  &__childWrap ul li .p-header-sp__childText {
+    padding: 20px 0;
+    display: block;
+    font-weight: bold;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  &__childWrap ul li:first-child a {
+    padding-top: 25px
+  }
+  &__indexChild ul li .p-header-sp__childMain {
+    padding: 20px 0;
+    display: block;
+    font-weight: bold;
+  }
+  &__childMain {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 2px;
+      margin-top: -3px;
+      width: 6px;
+      height: 6px;
+      border-top: 1px solid #fff;
+      border-right: 1px solid #fff;
+      transform: rotate(45deg);
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  &__childCategory {
+    display: block;
+    padding: 12px 0;
+    margin-left: 20px !important;
+  }
+  &__info {
+    padding: 20px 20px 30px;
+    background: rgba(98, 158, 178, 0.96);
+    text-align: center;
+    border-top: 1px solid #86b5c5;
+  }
+  &__info ul {
+    margin-bottom: 15px;
+  }
+  &__info li {
+    display: inline-block;
+    margin-right: 40px;
+  }
+  &__info a {
+    display: inline-block;
+  }
+  &__infoLink {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px 5px 16px;
+    color: #222;
+    vertical-align: middle;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    &::before {
+      position: absolute;
+      margin: auto;
+      content: "";
+      vertical-align: middle;
+      top: 42%;
+      left: 4px;
+      width: 4px;
+      height: 4px;
+      border-top: 1px solid #fff;
+      border-right: 1px solid #fff;
+      transform: rotate(45deg);
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  &__infoSearch {
+    background: #fff;
+    margin-top: 26px;
+    font-size: 0;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+  &__infoSearch .p-header-sp__infoSearchLeft {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+  }
+  &__infoSearch .p-header-sp__infoSearchLeft input[type="text"] {
+    font-size: 1.6rem;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    padding: 10px;
+    font-family: inherit;
+    line-height: normal;
+    margin: 0;
+  }
+  &__infoSearch .p-header-sp__infoSearchRight {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+    margin-inline-start: 40px;
+  }
+  &__infoSearch input[type="submit"] {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+  }
+}
+
+.p-header-sp a {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+@media only screen and(max-width:767px){
+  .p-header-sp {
+    &__infoLink {
+      padding: 0 0 0 14px;
+      white-space: normal;
+      line-height: 1.6;
+      font-size: 1.2rem;
+      &::before {
+        top: 30%;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        border-top: 1px solid #fff;
+        border-right: 1px solid #fff;
+      }
+    }
+    &__index {
+      font-size: 1.2rem;
+    }
+  }
+  .p-header-sp a {
+    font-size: 1.2rem;
+  }
+}

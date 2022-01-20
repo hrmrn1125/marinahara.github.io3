@@ -1,0 +1,55 @@
+.l-contents2 {
+  width: 100%;
+  overflow: hidden;
+  background: #53565a;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 38.28125vw;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all 0.7s ease-out;
+    cursor: pointer;
+    background: url('#{$bgPath}mission.png') no-repeat center right;
+    background-size: cover;
+  }
+
+  &__txt {
+    width: 100%;
+    height: calc(100% - 71px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+  }
+  &__txt .l-contents__copy {
+    color: #fff;
+    line-height: 2.5;
+    font-size: 1.6rem;
+    text-shadow: 1px 2px 3px #616161;
+  }
+}
+
+.l-contents2 .l-contents__ttlBox {
+  margin-top: 75px;
+  margin-bottom: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.l-contents2 a {
+  backdrop-filter: blur(1.2px);
+}
