@@ -14,7 +14,10 @@
   &__topLeft ul {
     zoom: 1;
   }
-  &__top li a {
+  &__top .service a {
+    backdrop-filter: blur(1.2px);
+  }
+  &__top .corporate a {
     backdrop-filter: blur(1.2px);
   }
   &__vision a {
@@ -124,7 +127,7 @@
     &::after {
       background: url('#{$bgPath}header/cm.jpg') no-repeat center right;
       background-size: cover;
-      filter: sepia(10%);
+      filter: grayscale(50%);
     }
   }
   &__top .l-contents__pic.business {
@@ -132,7 +135,7 @@
     &::after {
       background: url('#{$bgPath}business.png') no-repeat center center;
       background-size: cover;
-      filter: grayscale(40%);
+      filter: grayscale(50%);
     }
   }
   &__top .l-contents__pic.corporate {
