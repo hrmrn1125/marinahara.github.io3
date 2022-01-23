@@ -45,8 +45,7 @@
   border-top: 1px solid #dbdbdb;
 }
 
-.l-footer-sp .l-footer__nav > li {
-  border-bottom: 1px solid #dbdbdb;
+.l-footer-sp .l-footer__nav > .l-footer__navInner {
   font-size: 1.4rem;
 }
 
@@ -56,17 +55,18 @@
 }
 
 .l-footer-sp .l-footer__nav .l-footer__sloganWrap > li {
-  padding: 15px 15px;
+  padding: 18px 15px;
   float: left;
   zoom: 1;
   &:first-child {
     padding-right: 30px;
-    width: 45%;
+    width: 43%;
   }
   &:last-child {
     padding-left: 20px;
     float: right;
-    width: 55%;
+    width: 57%;
+    margin: 2px 0;
   }
   &::after {
     content: "";
@@ -75,8 +75,127 @@
   }
 }
 
+.l-footer-sp .l-footer__group {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.l-footer-sp .l-footer__group li {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.l-footer-sp .l-footer__group li.l-footer__groupIndex {
+  width: 100%;
+  font-size: 1.4rem;
+}
+
+.l-footer-sp .l-footer__group li a {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.l-footer-sp .l-footer__snsBox {
+  text-align: center;
+  font-size: 0;
+  border-bottom: 1px solid #dbdbdb;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.l-footer-sp .l-footer__snsBox li {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.l-footer-sp .l-footer__snsBox li a {
+  display: block;
+  height: 100%;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.l-footer-sp .l-footer__snsBox li.l-footer__fb {
+  background: #97999b url('#{$bgPath}footer/fbWhite.png') no-repeat center center;
+  background-size: auto 20px;
+}
+
+.l-footer-sp .l-footer__snsBox li.l-footer__yt {
+  background: #97999b url('#{$bgPath}footer/ytWhite.png') no-repeat center center;
+  background-size: 20px auto;
+}
+
+.l-footer-sp .l-footer__snsBox li.l-footer__linkedIn {
+  background: #97999b url('#{$bgPath}footer/liWhite.png') no-repeat center center;
+  background-size: 20px auto;
+}
+
+.l-footer-sp .l-footer__snsBox li.l-footer__hatebu {
+  background: #97999b url('#{$bgPath}footer/hatenaWhite.png') no-repeat center center;
+  background-size: 20px auto;
+}
+
+.l-footer-sp .l-footer__snsBox li.l-footer__snsTxt {
+  display: block;
+  height: auto;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+.l-footer-sp .l-footer__compliance {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.l-footer-sp .l-footer__compliance li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.l-footer-sp .l-footer__compliance li a {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.l-footer-sp .l-footer__copyright {
+  font-size: 1.2rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  display: block;
+}
+
+.f-inner {
+  max-width: 1180px;
+  min-width: 980px;
+  margin: 0 auto;
+}
+
 @media only screen and(min-width: 980px){
   .l-footer-sp {
     display: none !important;
+  }
+}
+
+@media only screen and(min-width: 768px) and (max-width: 979px){
+  .f-inner {
+    max-width: 100% !important;
+    min-width: 100% !important;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+}
+
+@media only screen and(max-width: 767px){
+  .f-inner {
+    max-width: 100% !important;
+    min-width: 100% !important;
+    padding: 0 20px;
   }
 }
