@@ -42,7 +42,7 @@
     &::after {
       background: url('#{$bgPath}service.png') no-repeat center center;
       background-size: cover;
-      filter: sepia(40%);
+      filter: sepia(60%);
     }
   }
   &__top .full {
@@ -135,7 +135,7 @@
     &::after {
       background: url('#{$bgPath}business.png') no-repeat center center;
       background-size: cover;
-      filter: grayscale(50%);
+      filter: grayscale(80%);
     }
   }
   &__top .l-contents__pic.corporate {

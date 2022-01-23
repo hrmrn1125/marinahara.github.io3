@@ -82,7 +82,7 @@ $(() => {
 });
 
 /* ============================================================
-megamenu（クリックバージョン）
+header メニュー（クリックバージョン）
 ============================================================ */
 $(() => {
   const dd_btn = $(".l-header-pc__navIndex");
@@ -122,7 +122,7 @@ $(() => {
 
 
 /* ============================================================
-navアンダーライン移動
+header navアンダーライン移動
 ============================================================ */
 const j$ = jQuery,
     $nav = j$(".l-header-pc__navInner"),
@@ -278,3 +278,37 @@ function stop_slide(){
 	clearInterval(slide_timer);
   slide_timer = "";
 }
+
+
+/* ============================================================
+PC pageTop
+============================================================ */
+$(() => {
+  $('a[href^="#"]').click(function(){
+    let speed = 800;
+    let href= $(this).attr("href");
+    let target = $(href === "#" || href === "" ? 'html' : href);
+    let position = target.offset().top;
+    $("html, body").animate({scrollTop:position}, speed, "swing");
+    return false;
+  });
+});
+
+$(() => {
+  $(window).bind("scroll", function() {
+  if ($(this).scrollTop() > 100) {
+    $(".l-footer-pc__pageTop").fadeIn();
+  } else {
+    $(".l-footer-pc__pageTop").fadeOut();
+  }
+  let scrollHeight = $(document).height();
+  let scrollPosition = $(window).height() + $(window).scrollTop();
+  let footHeight = $(".l-footer-pc__main").height();
+
+  if ( scrollHeight - scrollPosition  <= footHeight ) {
+    $(".l-footer-pc__pageTop a").css({"position":"fixed","bottom": "0px"});
+  } else {
+    $(".l-footer-pc__pageTop a").css({"position":"fixed","bottom": "0px"});
+    }
+  });
+});

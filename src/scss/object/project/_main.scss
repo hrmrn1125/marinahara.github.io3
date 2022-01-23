@@ -1,34 +1,4 @@
 .p-main {
-  &__news {
-    width: 100%;
-    vertical-align: top;
-    /* border-bottom: 1px solid #dbdbdb; */
-    position: relative;
-    line-height: 2;
-  }
-  &__newsIndex {
-    z-index: 1;
-    transition: all 0.3s;
-  }
-  &__newsIndex a {
-    display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  &__newsIndex .p-main__newsDate {
-    color: #7a7a7a;
-    padding-left: 30px;
-  }
-  &__newsIndex .p-main__newsTxtWrap {
-    width: 645px;
-    max-width: 72%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    padding-right: 46px;
-  }
   &__sliderWrap {
     margin: 0;
     padding: 0;
