@@ -1,7 +1,7 @@
 .l-footer-sp {
   position: relative;
   width: 100%;
-  padding-top: 55px;
+  padding-top: 45px;
   background: #fff;
   z-index: 2;
 }
@@ -56,17 +56,17 @@
 }
 
 .l-footer-sp .l-footer__nav .l-footer__sloganWrap > li {
-  padding: 20px 20px 15px;
+  padding: 15px 15px;
   float: left;
   zoom: 1;
   &:first-child {
     padding-right: 30px;
-    width: 40%;
+    width: 45%;
   }
   &:last-child {
     padding-left: 20px;
     float: right;
-    width: 60%;
+    width: 55%;
   }
   &::after {
     content: "";

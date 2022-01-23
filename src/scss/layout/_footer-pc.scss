@@ -83,3 +83,9 @@
 .l-footer-pc .l-footer__wrap .l-footer__snsBox li.l-footer__hatebu {
   background: url('#{$bgPath}footer/hatenaBlack.png') no-repeat center bottom / 25px auto;
 }
+
+@media only screen and(max-width: 979px){
+  .l-footer-pc {
+    display: none !important;
+  }
+}
