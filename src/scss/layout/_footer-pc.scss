@@ -1,0 +1,85 @@
+.l-footer {
+	color: #fff;
+
+  &__inner {
+    max-width: 1180px;
+    min-width: 980px;
+    margin: 0 auto;
+  }
+}
+
+.l-footer-pc {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  z-index: 2;
+}
+
+.l-footer-pc a {
+  transition: all 0.3s;
+}
+
+.l-footer-pc .l-footer__wrap {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background: #ffffff;
+}
+
+.l-footer-pc .l-footer__sns {
+  zoom: 1;
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.l-footer-pc .l-footer__wrap p,
+.l-footer-pc .l-footer__wrap a {
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.l-footer-pc .l-footer__wrap .l-footer__snsBox {
+  zoom: 1;
+  float: right;
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.l-footer-pc .l-footer__wrap .l-footer__snsBox li {
+  float: left;
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  transition: all .5s;
+}
+
+.l-footer-pc .l-footer__wrap .l-footer__snsBox li a {
+  display: block;
+  height: 100%;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.l-footer-pc .l-footer__wrap .l-footer__snsBox li.l-footer__fb {
+  background: url('#{$bgPath}footer/fbBlack.png') no-repeat center bottom / auto 25px;
+}
+
+.l-footer-pc .l-footer__wrap .l-footer__snsBox li.l-footer__yt {
+  background: url('#{$bgPath}footer/ytBlack.png') no-repeat center bottom / 28px auto;
+}
+
+.l-footer-pc .l-footer__wrap .l-footer__snsBox li.l-footer__linkedIn {
+  background: url('#{$bgPath}footer/liBlack.png') no-repeat center bottom / 25px auto;
+}
+
+.l-footer-pc .l-footer__wrap .l-footer__snsBox li.l-footer__hatebu {
+  background: url('#{$bgPath}footer/hatenaBlack.png') no-repeat center bottom / 25px auto;
+}
