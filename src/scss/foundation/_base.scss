@@ -38,6 +38,12 @@ li, ol, ul {
   list-style: none;
 }
 
+p,
+li,
+a {
+  font-size: 1.4rem;
+}
+
 img {
   width: 100%;
   vertical-align: middle;
@@ -49,6 +55,14 @@ a {
   color: #222;
   text-decoration: none;
   transition: all .3s;
+}
+
+@media only screen and(max-width: 767px){
+  p,
+  li,
+  a {
+    font-size: 1.2rem;
+  }
 }
 
 // デバッグ用

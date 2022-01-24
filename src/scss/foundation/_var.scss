@@ -1,6 +1,6 @@
 // breakpoint
-$breakSP: 768;
-$breakPC: 950;
+$breakSP: 767;
+$breakPC: 979;
 $breakpoints: (
   'u-sp': 'print, screen and (max-width: #{$breakSP}px)',
   'o-sp': 'print, screen and (min-width: #{$breakSP + 1}px)',

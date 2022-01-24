@@ -46,16 +46,18 @@
   }
   &__topNews .l-main__infoTtl {
     float: left;
-    width: 280px;
+    width: 290px;
     height: 115px;
     padding-left: 20px;
+    margin-right: 20px;
   }
   &__topNews .l-main__infoTtl h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
+    font-size: 2.7rem;
     font-weight: 200;
     vertical-align: top;
     margin-top: 20px;
+    white-space: nowrap;
   }
   &__topNews .l-main__infoLink {
     width: 90px;
@@ -69,7 +71,7 @@
   &__infoArrow {
     position: relative;
     display: inline-block;
-    padding: 5px 20px 5px 16px;
+    padding: 5px 0 5px 16px;
     color: #222;
     vertical-align: middle;
     font-size: 1.4rem;
@@ -87,11 +89,17 @@
       border-right: 1px solid #fff;
       transform: rotate(45deg);
     }
+    &:hover {
+      background-color: rgb(224, 224, 224);
+    }
   }
   &__infoArrow.blue {
     &::before {
       border-top-color: #73a4b7;
       border-right-color: #73a4b7;
+    }
+    &:hover {
+      background-color: rgb(224, 224, 224);
     }
   }
   &__topNews .l-main__infoArrowTab {
@@ -115,11 +123,17 @@
       border-right: 1px solid #fff;
       transform: rotate(45deg);
     }
+    &:hover {
+      background-color: rgb(224, 224, 224);
+    }
   }
   &__topNews .l-main__infoArrowTab.blue {
     &::before {
       border-top-color: #73a4b7;
       border-right-color: #73a4b7;
+    }
+    &:hover {
+      background-color: rgb(224, 224, 224);
     }
   }
 }
@@ -230,6 +244,9 @@
       padding-right: 0;
       padding-bottom: 0;
       font-size: 1.2rem;
+      &:hover {
+        background-color: rgb(224, 224, 224);
+      }
     }
     &__topNews .l-main__infoLink {
       right: 0;

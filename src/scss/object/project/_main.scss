@@ -179,6 +179,9 @@
       width: 100%;
       table-layout: fixed;
       margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
     &__newsIndex a {
       display: flex;
