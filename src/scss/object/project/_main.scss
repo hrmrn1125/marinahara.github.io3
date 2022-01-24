@@ -182,6 +182,12 @@
       &:last-child {
         margin-bottom: 0;
       }
+      &:hover {
+        background: #fff;
+        box-shadow: none;
+        z-index: 1;
+        opacity: 0.6;
+      }
     }
     &__newsIndex a {
       display: flex;

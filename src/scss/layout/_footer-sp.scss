@@ -90,11 +90,15 @@
 .l-footer-sp .l-footer__group li.l-footer__groupIndex {
   width: 100%;
   font-size: 1.4rem;
+  font-weight: bold;
 }
 
 .l-footer-sp .l-footer__group li a {
   display: block;
   font-size: 1.3rem;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .l-footer-sp .l-footer__snsBox {
@@ -123,21 +127,33 @@
 .l-footer-sp .l-footer__snsBox li.l-footer__fb {
   background: #97999b url('#{$bgPath}footer/fbWhite.png') no-repeat center center;
   background-size: auto 20px;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .l-footer-sp .l-footer__snsBox li.l-footer__yt {
   background: #97999b url('#{$bgPath}footer/ytWhite.png') no-repeat center center;
   background-size: 20px auto;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .l-footer-sp .l-footer__snsBox li.l-footer__linkedIn {
   background: #97999b url('#{$bgPath}footer/liWhite.png') no-repeat center center;
   background-size: 20px auto;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .l-footer-sp .l-footer__snsBox li.l-footer__hatebu {
   background: #97999b url('#{$bgPath}footer/hatenaWhite.png') no-repeat center center;
   background-size: 20px auto;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .l-footer-sp .l-footer__snsBox li.l-footer__snsTxt {
@@ -161,6 +177,9 @@
 .l-footer-sp .l-footer__compliance li a {
   display: block;
   font-size: 1.3rem;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .l-footer-sp .l-footer__copyright {

@@ -44,6 +44,12 @@
       background-size: cover;
       filter: sepia(60%);
     }
+    &:hover {
+      &::after {
+        transform: scale(1.05);
+        opacity: 0.85;
+      }
+    }
   }
   &__top .full {
     width: 100%;
@@ -129,6 +135,12 @@
       background-size: cover;
       filter: grayscale(50%);
     }
+    &:hover {
+      &::after {
+        transform: scale(1.05);
+        opacity: 0.85;
+      }
+    }
   }
   &__top .l-contents__pic.business {
     float: left;
@@ -137,6 +149,12 @@
       background-size: cover;
       filter: grayscale(80%);
     }
+    &:hover {
+      &::after {
+        transform: scale(1.05);
+        opacity: 0.85;
+      }
+    }
   }
   &__top .l-contents__pic.corporate {
     float: left;
@@ -144,6 +162,12 @@
       background: url('#{$bgPath}corporate.png') no-repeat center right;
       background-size: cover;
       filter: sepia(10%);
+    }
+    &:hover {
+      &::after {
+        transform: scale(1.05);
+        opacity: 0.85;
+      }
     }
   }
   &__vision {
@@ -167,6 +191,12 @@
       transition: all 0.7s ease-out;
       cursor: pointer;
       background: url('#{$bgPath}vision.png') no-repeat center top / cover;
+    }
+    &:hover {
+      &::after {
+        transform: scale(1.05);
+        opacity: 0.85;
+      }
     }
   }
   &__vision .l-contents__visionText {
@@ -338,7 +368,7 @@
       margin-top: 6.6%;
       margin-bottom: 30px;
       font-size: 1.2rem;
-      line-height: 2;
+      line-height: 2.5;
       text-align: center;
     }
   }
