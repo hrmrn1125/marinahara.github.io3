@@ -41,25 +41,63 @@
     empty-cells: show;
     text-align: left;
     font-weight: 400;
-    display: table-row-group;
+    display: flex;
     vertical-align: middle;
   }
-  &__topNews .l-main__info .l-main__infoTtl {
+  &__topNews .l-main__infoTtl {
     float: left;
     width: 280px;
     height: 115px;
+    padding-left: 20px;
   }
-  &__topNews .l-main__info .l-main__infoTtl h2 {
+  &__topNews .l-main__infoTtl h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     font-weight: 200;
     vertical-align: top;
     margin-top: 20px;
   }
+  &__topNews .l-main__infoLink {
+    width: 90px;
+    text-align: right;
+    white-space: nowrap;
+    position: absolute;
+    top: 22px;
+    right: 0;
+    transition: all 0.3s;
+  }
+  &__infoArrow {
+    position: relative;
+    display: inline-block;
+    padding: 5px 20px 5px 16px;
+    color: #222;
+    vertical-align: middle;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    &::before {
+      position: absolute;
+      margin: auto;
+      content: "";
+      vertical-align: middle;
+      top: 42%;
+      left: 4px;
+      width: 4px;
+      height: 4px;
+      border-top: 1px solid #fff;
+      border-right: 1px solid #fff;
+      transform: rotate(45deg);
+    }
+  }
+  &__infoArrow.blue {
+    &::before {
+      border-top-color: #73a4b7;
+      border-right-color: #73a4b7;
+    }
+  }
   &__topNews .l-main__infoArrowTab {
     position: relative;
     display: inline-block;
-    padding: 5px 10px 5px 16px;
+    padding: 5px 0 5px 16px;
     color: #222;
     vertical-align: middle;
     font-size: 1.4rem;
@@ -84,49 +122,19 @@
       border-right-color: #73a4b7;
     }
   }
-  &__topNews .l-main__info .p-main__news {
-    width: 100%;
-    vertical-align: top;
-    /* border-bottom: 1px solid #dbdbdb; */
-    position: relative;
-    line-height: 2;
-  }
-  &__topNews .l-main__info .p-main__news .p-main__newsIndex {
-    z-index: 1;
-    transition: all 0.3s;
-  }
-  &__topNews .l-main__info .p-main__news .p-main__newsIndex a {
-    display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  &__topNews .l-main__info .p-main__news .p-main__newsIndex .p-main__newsDate {
-    display: flex;
-    color: #7a7a7a;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  &__topNews .l-main__info .p-main__news .p-main__newsIndex .p-main__newsTxtWrap {
-    width: 645px;
-    max-width: 72%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    padding-right: 46px;
-  }
 }
 
 
 @media only screen and(max-width: 1367px) and (min-width: 980px){
   .l-main {
     &__topNews .l-main__info .l-main__infoTtl {
-      width: 220px;
       padding-left: 20px;
     }
-    &__topNews .l-main__info .l-main__infoTtl h2 {
+    &__topNews .l-main__infoTtl h2 {
       font-size: 2.4rem;
+    }
+    &__topNews .l-main__info .p-main__news .l-main__infoLink {
+      padding-right: 0;
     }
   }
 }
@@ -138,6 +146,7 @@
     }
   }
 }
+
 
 @media only screen and(min-width: 768px) and (max-width: 979px){
   .l-main {
@@ -151,14 +160,19 @@
       padding: 0 20px;
       overflow: hidden;
     }
+    &__topNews .l-main__infoWrap {
+      display: block;
+    }
     &__topNews .l-main__infoTtl {
       float: none;
       display: block;
       width: 100%;
       margin-top: 30px;
       padding-bottom: 15px;
+      padding-left: 0;
       height: auto;
       zoom: 1;
+      position: relative;
       &::after {
         content: "";
         display: block;
@@ -175,12 +189,18 @@
       line-height: 1;
       margin-top: 0;
     }
+    &__infoArrow {
+      display: none !important;
+    }
     &__topNews .l-main__infoLink {
       float: right;
       display: block;
       width: 30%;
       text-align: right;
       white-space: nowrap;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 }
@@ -205,11 +225,14 @@
       min-width: 100% !important;
       padding: 0 20px;
     }
-    &__topNews .l-main__infoArrowTab {
-      padding: 0 0 0 14px;
-      white-space: normal;
-      line-height: 1.6;
+    &__infoArrow {
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 0;
       font-size: 1.2rem;
+    }
+    &__topNews .l-main__infoLink {
+      right: 0;
     }
   }
 }
