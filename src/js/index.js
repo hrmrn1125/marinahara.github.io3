@@ -57,7 +57,6 @@ $(() => {
 //入力内容削除ボタン
 $(() => {
   $(document).ready(() => {
-    //初期化
     $('.l-header-pc .p-header-sp__searchBox form').addClass('empty');
     $('.l-header-pc .p-header-sp__searchBox form').append('<span class="l-header-pc__delete"></span>');
     //削除ボタン押下時
@@ -65,7 +64,7 @@ $(() => {
       const input = $(this).siblings('.l-header-pc__searchInput');
       input.val('');
       $(this).parent('form').addClass('empty');
-      e.stopPropagation(); //親要素のイベント伝播を止める
+      e.stopPropagation();
     });
     //テキストボックス入力時
     $('.l-header-pc__searchInput').keyup(function(e) {
@@ -76,7 +75,6 @@ $(() => {
       else{
         $(this).parent('form').removeClass('empty');
       }
-      //e.stopPropagation(); //親要素のイベント伝播を止める
     });
   });
 });
@@ -96,22 +94,21 @@ $(() => {
         parent.removeClass("selected");
       }
       else{
-        dd_btn.removeClass("selected"); //他のメニューの"selected"を削除
+        dd_btn.removeClass("selected");
         parent.addClass("selected");
       }
 
       changeDisplay(parent);
-      e.stopPropagation(); //親要素のイベント伝播を止める
+      e.stopPropagation();
     });
 
     //ドロップダウンボタン以外クリック時
     $("body,.l-header-pc__subClose").on("click",() => {
-      dd_btn.removeClass("selected"); //クラスに"selected"がついていれば外す
+      dd_btn.removeClass("selected");
       changeDisplay();
     });
 
     function changeDisplay(parent){
-      //メガメニューが表示されていれば非表示にする
       $(".l-header-pc__subNav").removeClass("active");
       if(parent && parent.hasClass("selected")){
         parent.next(".l-header-pc__subNav").addClass("active");
@@ -130,14 +127,12 @@ const j$ = jQuery,
     $currentItem = j$(".l-header-pc__nav .current");
 
 j$(() => {
-  // Menu has active item
   if ($currentItem[0]) {
     $slideLine.css({
       "width": $currentItem.width() + 20,
       "left": $currentItem.position().left
     });
   }
-  // Underline transition
   j$($nav).find(".l-header-pc__navIndex").hover(
     // Hover on
     function(){
@@ -149,13 +144,11 @@ j$(() => {
     // Hover out
     () => {
       if ($currentItem[0]) {
-        // Go back to current
         $slideLine.css({
           "width": $currentItem.width() + 20,
           "left": $currentItem.position().left
         });
       } else {
-        // Disappear
         $slideLine.width(0);
       }
     }
@@ -225,7 +218,6 @@ function slide_initialize(){
       $main_slider_li.css('opacity','');
       $main_slider_li.css('zIndex','');
     }
-    //スマホのスライドアニメーション スタート
     if(!$main_slider.hasClass('slick-initialized')){
 		$main_slider.slick({
 			infinite: true,
@@ -238,7 +230,6 @@ function slide_initialize(){
 			slidesToShow: 1,
 			autoplaySpeed: 5000,
 		})
-     //スマホのスライドの秒数指定。1枚目は2秒、それ以外は5秒
 			.on("afterChange", function(event, slick, current_num) {
 			switch (current_num){
 				case 0:// 1枚目のスライドの秒数は3.5秒

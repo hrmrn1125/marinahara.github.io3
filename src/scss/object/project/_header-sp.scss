@@ -177,6 +177,9 @@
     font-family: inherit;
     line-height: normal;
     margin: 0;
+    &:focus-visible {
+      outline: -webkit-focus-ring-color auto 1px;
+    }
   }
   &__infoSearch .p-header-sp__infoSearchRight {
     display: table-cell;
@@ -184,32 +187,17 @@
     width: 40px;
     vertical-align: middle;
   }
-  &__infoSearch input[type="submit"] {
-    width: 40px;
-    height: 40px;
+  &__infoSearch input[type="image"] {
+    width: 26px;
+    height: 26px;
     border: 0;
     background-color: transparent;
     cursor: pointer;
-    outline: none;
     padding: 0;
     appearance: none;
-  }
-  &__infoSearch .p-header-sp__infoSearchRight span {
-    width: 30px;
-    height: 30px;
-    display: block;
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    cursor: pointer;
-    z-index: 90;
-    text-transform: none;
-    transition: all 0.3s;
-    background: url('#{$bgPath}search.png') no-repeat center top;
-    background-size: contain;
-    margin-top: 5px;
-    margin-right: 5px;
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }
 
