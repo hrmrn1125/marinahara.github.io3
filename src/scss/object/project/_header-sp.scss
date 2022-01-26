@@ -178,7 +178,8 @@
     line-height: normal;
     margin: 0;
     &:focus {
-      border-radius: blue 1px;
+      border: solid 1px blue;
+      border-radius: 5px;
     }
     &:focus-visible {
       outline: -webkit-focus-ring-color auto 1px;
