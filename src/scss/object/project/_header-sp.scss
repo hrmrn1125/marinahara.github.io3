@@ -177,6 +177,9 @@
     font-family: inherit;
     line-height: normal;
     margin: 0;
+    &:focus {
+      border-radius: blue 1px;
+    }
     &:focus-visible {
       outline: -webkit-focus-ring-color auto 1px;
     }
